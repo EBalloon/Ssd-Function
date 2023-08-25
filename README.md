@@ -2,7 +2,7 @@
 
 this is an example of how to get an nt/ze function in kernel mode without opening the dll ntdll.dll and mapping it
 
-void* GetSsdFunction(const char* Name)
+ void* GetSsdFunction(const char* Name)
  {
     void* Function = 0;
      
