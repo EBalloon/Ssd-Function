@@ -34,7 +34,7 @@ this is an example of how to get an NT/ZW functions in kernel mode without openi
 	}
 
  ### Example usage
- auto NtSuspendThread = GetSsdFunction("NtSuspendThread");
+	auto NtSuspendThread = GetSsdFunction("NtSuspendThread");
 
 more info:
 https://www.vergiliusproject.com/kernels/x64/Windows%2010%20|%202016/2004%2020H1%20(May%202020%20Update)/_MI_SYSTEM_INFORMATION
