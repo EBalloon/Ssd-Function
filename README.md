@@ -1,6 +1,6 @@
 # Ssd-Function
 
-this is an example of how to get an NT/ZW functions in kernel mode without opening the dll ntdll.dll and mapping it
+this is an example of how to get an NT/ZW functions in kernel mode without opening the ntdll.dll and mapping it
 
 	void* GetSsdFunction(const char* Name)
 	{
