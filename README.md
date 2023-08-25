@@ -2,9 +2,9 @@
 
 this is an example of how to get an nt/ze function in kernel mode without opening the dll ntdll.dll and mapping it
 
- void* GetSsdFunction(const char* Name)
- {
-    void* Function = 0;
+  void* GetSsdFunction(const char* Name)
+  {
+     void* Function = 0;
      
     auto MiState = calc_offset<uint64_t>(ResolveRelativeAddress(FindPatternImage(ntosBase,
     	"4C 8D 1D ? ? ? ? 49 BE ? ? ? ? ? ? ? ? F7 84 24 ? ? ? ? ? ? ? ? 49 B9"), 3)); //_MI_SYSTEM_INFORMATION
