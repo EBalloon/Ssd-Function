@@ -2,8 +2,8 @@
 
 this is an example of how to get an nt/ze function in kernel mode without opening the dll ntdll.dll and mapping it
 
-void* GetSsdFunction(const char* Name)
-{
+	void* GetSsdFunction(const char* Name)
+	{
 	void* Function = 0;
  
 	auto MiState = calc_offset<uint64_t>(ResolveRelativeAddress(FindPatternImage(ntosBase,
@@ -33,7 +33,7 @@ void* GetSsdFunction(const char* Name)
 	return reinterpret_cast<unsigned char*>(KeServiceDescriptorTable->ServiceTableBase) + (reinterpret_cast<long*>(KeServiceDescriptorTable->ServiceTableBase)[ssdt_offset] >> 4);
 }
 
- # Example usage
+ ### Example usage
  auto NtSuspendThread = GetSsdFunction("NtSuspendThread");
 
 more info:
