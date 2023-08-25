@@ -30,7 +30,8 @@
      
     	return reinterpret_cast<unsigned char*>(KeServiceDescriptorTable->ServiceTableBase) + (reinterpret_cast<long*>(KeServiceDescriptorTable->ServiceTableBase)[ssdt_offset] >> 4);
     }
-     
+
+    # Example usage
     auto NtSuspendThread = GetSsdFunction("NtSuspendThread");
 
 more info:
